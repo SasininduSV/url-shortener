@@ -1,4 +1,4 @@
-package com.url.shortner.models;
+package com.url.shortener.models;
 
 import java.util.List;
 import jakarta.persistence.*;

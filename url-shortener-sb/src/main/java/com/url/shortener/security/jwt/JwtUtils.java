@@ -1,19 +1,20 @@
-package com.url.shortner.security.jwt;
+package com.url.shortener.security.jwt;
 
-import com.url.shortner.service.UserDetailsImpl;
+import com.url.shortener.service.UserDetailsImpl;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+@Component
 public class JwtUtils {
 
     @Value("${jwt.secret}")
